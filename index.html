@@ -3,116 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Landing Page AI 30 Minit | Ksocial Marketing</title>
+    <title>Landing Page AI 30 Minit | Ksocial Marketing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .gradient-text { background: linear-gradient(90deg, #8B5CF6, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-glow { box-shadow: 0 0 50px rgba(139, 92, 246, 0.3); }
-        .btn-glow:hover { box-shadow: 0 0 20px rgba(245, 158, 11, 0.6); transition: 0.3s; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        .gradient-text { background: linear-gradient(90deg, #8B5CF6, #FBBF24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(251, 191, 36, 0); } 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); } }
+        .btn-pulse { animation: pulse-gold 2s infinite; }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+        .problem-card { background: rgba(20, 20, 20, 0.6); border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .problem-card:hover { border-color: rgba(239, 68, 68, 0.3); box-shadow: 0 10px 30px rgba(239, 68, 68, 0.1); }
+        .testimonial-glow { box-shadow: inset 0 0 15px rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.1); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-gray-200">
 
-    <nav class="p-6 flex justify-center">
-        <div class="flex flex-col items-center">
-            <img src="https://i.ibb.co/VvW0p0m/Ksocial-Logo.jpg" alt="Ksocial Marketing Logo" class="h-16 mb-2">
-            <p class="text-xs tracking-[0.2em] text-gray-400 uppercase">Unlocking Potential. Driving Growth.</p>
+    <section class="min-h-screen flex flex-col justify-between py-6 px-6">
+        <nav class="text-center">
+            <div class="group inline-block">
+                <img src="https://i.ibb.co/qL7kCDB7/Ksocial-Transparent-Logo.png" alt="Logo" class="h-20 md:h-24 mx-auto mb-1 transition-transform group-hover:scale-105">
+                <p class="text-[9px] tracking-[0.4em] text-gray-500 uppercase font-bold">Unlocking Potential • Driving Growth</p>
+            </div>
+        </nav>
+        <header class="max-w-5xl mx-auto text-center mt-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter">
+                Bayangkan boleh launch <br>
+                <span class="text-yellow-400">landing page dalam 30 minit…</span><br>
+                <span class="text-white/40 text-2xl md:text-4xl font-light">tanpa tunggu sesiapa.</span>
+            </h1>
+        </header>
+        <div class="max-w-6xl mx-auto w-full grid md:grid-cols-3 gap-8 text-left border-y border-white/10 py-10 my-4">
+            <div class="space-y-3 group hover-lift">
+                <div class="flex items-center gap-2 text-yellow-500">
+                    <span class="font-black text-sm tracking-widest uppercase">01. STATUS</span>
+                    <i class="fas fa-check-circle text-yellow-500/30"></i>
+                </div>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed serif-italic">"Idea dah ada. Offer dah ready."</p>
+            </div>
+            <div class="space-y-3 border-l border-white/10 px-8 group hover-lift rounded-2xl py-2">
+                <div class="flex items-center gap-2 text-red-500">
+                    <span class="font-black text-sm tracking-widest uppercase">02. MASALAH</span>
+                    <i class="fas fa-exclamation-triangle animate-pulse"></i>
+                </div>
+                <p class="text-gray-400 text-lg md:text-xl leading-relaxed italic">"Sangkut dekat landing page. Tunggu designer. Tunggu revise. <span class="text-red-400 font-bold underline">Tunggu lagi.</span>"</p>
+            </div>
+            <div class="space-y-3 pl-8 group hover-lift border-l border-white/10">
+                <div class="flex items-center gap-2 text-blue-500">
+                    <span class="font-black text-sm tracking-widest uppercase text-blue-500">03. KESAN</span>
+                    <i class="fas fa-chart-line-down rotate-180"></i>
+                </div>
+                <p class="text-white text-xl md:text-2xl font-black leading-tight uppercase">"AKHIRNYA... LAUNCH DELAY. <span class="text-red-500">MOMENTUM HILANG.</span>"</p>
+            </div>
         </div>
-    </nav>
-
-    <section class="max-w-6xl mx-auto px-6 py-12 text-center">
-        <h2 class="text-blue-400 font-semibold tracking-widest uppercase mb-4">Masa Adalah Wang</h2>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Landing Page Siap Dalam <span class="gradient-text text-yellow-400">30 Minit?</span><br>
-            Guna AI Je, Tak Perlu Coding!
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Berhenti membazir ribuan ringgit dan menunggu berhari-hari untuk freelancer. Tukar <strong>Idea</strong> kepada <strong>Launching</strong> hari ini juga.
-        </p>
-        
-        <div class="relative inline-block group">
-            <a href="#order" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-full text-xl btn-glow flex items-center gap-3">
-                <i class="fas fa-rocket"></i> DAPATKAN SEKARANG
+        <div class="text-center flex flex-col items-center">
+            <a href="#order" class="btn-pulse inline-block bg-yellow-500 text-black font-black py-5 px-12 md:py-7 md:px-20 rounded-full text-xl md:text-3xl uppercase tracking-tighter hover:bg-white transition-all transform hover:scale-105 mb-6 shadow-2xl">
+                Dapatkan Tutorial AI Sekarang
             </a>
+            <div class="flex gap-8 md:gap-16 text-[10px] md:text-xs text-gray-500 uppercase tracking-[0.2em] font-bold">
+                <div class="flex items-center gap-2"><i class="fas fa-bolt text-yellow-500"></i> 30 Minit Siap</div>
+                <div class="flex items-center gap-2"><i class="fas fa-code text-blue-500"></i> No Coding Required</div>
+                <div class="flex items-center gap-2"><i class="fas fa-user-shield text-green-500"></i> Money Back Guarantee</div>
+            </div>
+            <div class="mt-8 animate-bounce text-gray-800 text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
-    <section class="bg-zinc-900 py-20 px-6">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-2xl font-bold mb-4 italic text-red-400">"Satu saat anda tangguh launch, satu saat anda sedang RUGI."</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Ramai usahawan terperangkap dengan isu teknikal. Nak setup pangkalan data, nak adjust design ikut selera, nak tunggu respon developer... Semuanya makan masa berhari-hari. 
-                </p>
+    <section class="bg-zinc-950 py-32 px-6 border-y border-zinc-900 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <span class="bg-red-500/20 text-red-500 py-2 px-6 rounded-full text-xs font-black tracking-widest uppercase mb-6 inline-block border border-red-500/30">Kenyataan Pahit Usahawan</span>
+                <h2 class="serif-italic text-5xl md:text-7xl text-white mt-4 leading-tight">
+                    "Setiap hari anda tangguh: Lead tak masuk, Sales tak jadi, Momentum hilang."
+                </h2>
             </div>
-            <div class="bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hero-glow">
-                <h4 class="text-xl font-bold mb-4 text-blue-400">Zaman Sekarang Guna AI</h4>
-                <ul class="space-y-4 text-sm">
-                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Level Antarabangsa (Professional & Creative)</li>
-                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Interactive & High Converting</li>
-                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Kos Rendah (Tanpa perlu upah pro)</li>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center text-lg leading-relaxed text-gray-300">
+                <div class="problem-card p-8 rounded-3xl hover-lift flex flex-col items-center justify-center space-y-4">
+                    <i class="fas fa-users text-5xl text-red-500/40 mb-2"></i>
+                    <p class="text-zinc-100 font-medium">Realitinya, ramai usahawan, marketer, dan freelancer <span class="text-white font-bold">stuck dekat benda yang sama.</span></p>
+                </div>
+                <div class="problem-card p-8 rounded-3xl hover-lift flex flex-col items-center justify-center space-y-4">
+                    <i class="fas fa-hourglass-half text-5xl text-red-500/40 mb-2"></i>
+                    <p>Nak launch produk / event… tapi <span class="text-white font-semibold italic">landing page tak siap-siap.</span> Outsource? <span class="text-red-400 font-bold">Tunggu 2–5 hari.</span></p>
+                </div>
+                <div class="problem-card p-8 rounded-3xl hover-lift flex flex-col items-center justify-center space-y-4">
+                    <i class="fas fa-sync-alt text-5xl text-yellow-500/40 mb-2"></i>
+                    <p><span class="text-yellow-400 font-black">Kena revise. Tunggu lagi.</span> Nak buat sendiri? Tak tahu coding. Tak tahu design.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl hover-lift flex flex-col items-center justify-center space-y-4 border-2 border-red-900 shadow-2xl relative">
+                    <i class="fas fa-times-circle text-5xl text-red-500 mb-2"></i>
+                    <p class="text-red-500 font-black block mt-1 uppercase text-xl leading-snug">Launch delay. <br>Campaign tak jalan. <br>Sales tak masuk.</p>
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto mt-24 text-center space-y-12">
+                <p class="text-gray-400 text-3xl font-extralight leading-relaxed tracking-tight">Masalah ni nampak kecil… tapi sebenarnya <span class="font-black text-white uppercase underline decoration-red-500 text-3xl">sangat mahal.</span></p>
+                <div class="bg-zinc-900/50 backdrop-blur-sm p-12 rounded-3xl border border-red-500/20 italic text-white shadow-2xl relative text-left">
+                    <i class="fas fa-quote-left absolute top-4 left-4 text-red-500/20 text-5xl"></i>
+                    <p class="text-xl leading-relaxed">“Research shows, it is not the smartest who win in business. It is those who are fastest to take action."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <i class="fas fa-brain text-6xl text-blue-500 mb-8 animate-pulse"></i>
+            <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Ini <span class="text-blue-400">Penyelesaian</span> Anda</h2>
+            <p class="text-3xl font-black text-gray-200 uppercase tracking-tighter italic gradient-text">“Bina Landing Page guna AI — 30 Minit Siap”</p>
+            <p class="text-gray-400 mt-6 max-w-3xl mx-auto italic leading-relaxed text-xl">
+                Tutorial lengkap oleh <span class="text-white font-black underline decoration-blue-500">Tuan Naim Shukry</span>. Rakaman hampir 3 jam penuh yang tunjuk step-by-step, dari kosong sampai live.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-zinc-900 p-12 rounded-[40px] border border-zinc-800 hover:border-yellow-500/50 transition duration-500 shadow-2xl">
+                <h3 class="text-3xl font-black mb-10 text-yellow-400 flex items-center gap-4 uppercase italic">
+                    <i class="fas fa-rocket"></i> Apa Anda Dapat
+                </h3>
+                <ul class="space-y-6 text-lg text-gray-100 font-medium">
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-green-500 mt-1"></i> Cara guna AI untuk generate structure sepantas kilat.</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-green-500 mt-1"></i> Copywriting Headline yang 'pukau' prospek guna AI.</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-green-500 mt-1"></i> Bina Landing Page level antarabangsa tanpa coding.</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-green-500 mt-1"></i> Automasi collect leads terus ke database.</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-check-circle text-green-500 mt-1"></i> Publish & Live hari ini juga.</li>
+                </ul>
+            </div>
+            <div class="bg-zinc-900 p-12 rounded-[40px] border border-zinc-800 hover:border-purple-500/50 transition duration-500 shadow-2xl">
+                <h3 class="text-3xl font-black mb-10 text-purple-400 flex items-center gap-4 uppercase italic">
+                    <i class="fas fa-gift"></i> Bonus Learning
+                </h3>
+                <ul class="space-y-6 text-lg text-gray-200 font-medium">
+                    <li class="flex items-start gap-4"><i class="fas fa-star text-purple-500 mt-1"></i> Teknik pemilihan tools yang tepat (Jimat Kos).</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-star text-purple-500 mt-1"></i> Bedah siasat (Review) Landing Page Bisnes sebenar.</li>
+                    <li class="flex items-start gap-4"><i class="fas fa-star text-purple-500 mt-1"></i> Strategi psikologi susunan (Flow) yang Convert.</li>
+                    <li class="bg-purple-950/40 p-6 rounded-2xl mt-8 font-black text-center border border-purple-800/50 tracking-tighter uppercase italic">
+                        Membezakan LP Biasa vs LP yang Mampu Buat Sales.
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">Apa Yang Anda Akan Belajar?</h2>
-            <p class="text-gray-400">Tutorial step-by-step oleh <strong>Tuan Naim Shukry</strong></p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-6 rounded-xl border border-zinc-800 hover:border-blue-500 transition">
-                <i class="fas fa-tools text-4xl text-blue-500 mb-6"></i>
-                <h5 class="font-bold mb-3">Live Setup Tools</h5>
-                <p class="text-sm text-gray-400">Segala tools percuma & berbayar yang diperlukan untuk terus live.</p>
+    <section class="py-32 px-6 bg-zinc-950 border-y border-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black mb-6 uppercase tracking-tighter">Hasil Kerja Student Kami</h2>
+                <p class="text-gray-500 text-xl italic">Kualiti antarabangsa, dibina oleh usahawan tempatan dalam minit.</p>
             </div>
-            <div class="p-6 rounded-xl border border-zinc-800 hover:border-blue-500 transition">
-                <i class="fas fa-brain text-4xl text-purple-500 mb-6"></i>
-                <h5 class="font-bold mb-3">Mastering AI Prompts</h5>
-                <p class="text-sm text-gray-400">Cara 'bercakap' dengan AI untuk hasilkan output tahap internasional.</p>
-            </div>
-            <div class="p-6 rounded-xl border border-zinc-800 hover:border-blue-500 transition">
-                <i class="fas fa-database text-4xl text-green-500 mb-6"></i>
-                <h5 class="font-bold mb-3">Automated Database</h5>
-                <p class="text-sm text-gray-400">Hasilkan pangkalan data automatik secara PERCUMA tanpa software mahal.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-to-b from-black to-zinc-900 py-20 px-6 text-center border-t border-zinc-800">
-        <h3 class="text-2xl font-bold mb-10">Selepas mengikuti tutorial ini:</h3>
-        <div class="max-w-3xl mx-auto space-y-4 text-left md:text-center">
-            <div class="bg-zinc-800 p-4 rounded-lg border-l-4 border-yellow-500">
-                🚀 Mampu hasilkan LP dalam 30 minit (Malah 10 minit jika sudah mahir!)
-            </div>
-            <div class="bg-zinc-800 p-4 rounded-lg border-l-4 border-yellow-500">
-                🎯 Tahu cara prompt yang tepat untuk visi produk anda.
-            </div>
-            <div class="bg-zinc-800 p-4 rounded-lg border-l-4 border-yellow-500">
-                🏆 Lebih advance daripada 70% usahawan konvensional.
+            <div class="flex flex-col gap-20">
+                <div class="group relative bg-zinc-900 rounded-[30px] overflow-hidden border border-white/10 shadow-2xl transition duration-500 hover:border-yellow-500/50">
+                    <div class="p-4 bg-zinc-800/50 border-b border-white/5">
+                        <h5 class="font-black text-yellow-400 uppercase text-sm tracking-[0.2em] text-center italic">Digital Course Style</h5>
+                    </div>
+                    <img src="https://i.ibb.co/JwCC3GkH/sample-utmhacademy.png" alt="Student Work 1" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-[1.02]">
+                </div>
+                <div class="group relative bg-zinc-900 rounded-[30px] overflow-hidden border border-white/10 shadow-2xl transition duration-500 hover:border-blue-500/50">
+                    <div class="p-4 bg-zinc-800/50 border-b border-white/5">
+                        <h5 class="font-black text-blue-400 uppercase text-sm tracking-[0.2em] text-center italic">Professional Service Style</h5>
+                    </div>
+                    <img src="https://i.ibb.co/Nd3LfLcb/sample-ppu.png" alt="Student Work 2" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-[1.02]">
+                </div>
+                <div class="group relative bg-zinc-900 rounded-[30px] overflow-hidden border border-white/10 shadow-2xl transition duration-500 hover:border-purple-500/50">
+                    <div class="p-4 bg-zinc-800/50 border-b border-white/5">
+                        <h5 class="font-black text-purple-400 uppercase text-sm tracking-[0.2em] text-center italic">E-Commerce Style</h5>
+                    </div>
+                    <img src="https://i.ibb.co/qLqWJ2nL/sample-jejakkhalifah.png" alt="Student Work 3" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-[1.02]">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-20 px-6 text-center">
-        <div class="bg-blue-600 rounded-3xl p-12 max-w-4xl mx-auto relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 italic text-white">"Tonton Sekarang & Terus Buat Sendiri!"</h2>
-                <p class="mb-8 text-blue-100 italic font-semibold italic">Tukar Idea Kepada Realiti Sebelum Pesaing Anda Melakukannya.</p>
-                <a href="https://learn.ksocialmarketing.com/" class="inline-block bg-yellow-400 hover:bg-white text-black font-black py-5 px-12 rounded-xl text-2xl uppercase transition-all transform hover:scale-105 shadow-2xl">
-                    <i class="fas fa-shopping-cart mr-2"></i> DAPATKAN TUTORIAL SEKARANG
-                </a>
+    <section class="py-32 px-6 max-w-6xl mx-auto text-black">
+        <div class="text-center mb-20 text-white">
+            <h2 class="text-5xl font-black mb-6 uppercase tracking-tighter">Apa Kata Peserta?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-32">
+            <div class="bg-zinc-50 p-10 rounded-3xl border border-zinc-100 testimonial-glow flex items-start gap-6 shadow-xl hover-lift">
+                <i class="fas fa-quote-left text-blue-500 text-4xl mt-1"></i>
+                <div>
+                    <p class="text-zinc-700 text-lg leading-relaxed italic mb-4">"Dapat cepatkan masa untuk closing sales."</p>
+                    <p class="text-blue-600 font-black uppercase text-sm tracking-widest">— Fuad</p>
+                </div>
             </div>
-            <div class="absolute top-0 right-0 opacity-10 text-9xl transform translate-x-10 -translate-y-10 uppercase font-black italic">
-                AI POWER
+            <div class="bg-zinc-50 p-10 rounded-3xl border border-zinc-100 testimonial-glow flex items-start gap-6 shadow-xl hover-lift">
+                <i class="fas fa-quote-left text-green-500 text-4xl mt-1"></i>
+                <div>
+                    <p class="text-zinc-700 text-lg leading-relaxed italic mb-4">"Memudahkan urusan jual beli & sangat membantu."</p>
+                    <p class="text-green-600 font-black uppercase text-sm tracking-widest">— Insyirah</p>
+                </div>
+            </div>
+            <div class="bg-zinc-50 p-10 rounded-3xl border border-zinc-100 testimonial-glow flex items-start gap-6 shadow-xl hover-lift">
+                <i class="fas fa-quote-left text-yellow-500 text-4xl mt-1"></i>
+                <div>
+                    <p class="text-zinc-700 text-lg leading-relaxed italic mb-4">"Membantu buat LP laju & connect ke whatsapp & Google Sheet."</p>
+                    <p class="text-yellow-600 font-black uppercase text-sm tracking-widest">— Amirah</p>
+                </div>
+            </div>
+            <div class="bg-zinc-50 p-10 rounded-3xl border border-zinc-100 testimonial-glow flex items-start gap-6 shadow-xl hover-lift">
+                <i class="fas fa-quote-left text-purple-500 text-4xl mt-1"></i>
+                <div>
+                    <p class="text-zinc-700 text-lg leading-relaxed italic mb-4">"Tak sangka boleh secepat ini. Mudahkan untuk menjual."</p>
+                    <p class="text-purple-600 font-black uppercase text-sm tracking-widest">— Amin</p>
+                </div>
             </div>
         </div>
-        <p class="mt-8 text-gray-500 text-sm">© 2026 Ksocial Marketing. All Rights Reserved.</p>
+        <div class="bg-green-950/20 p-12 rounded-[50px] border border-green-900/50 shadow-2xl relative overflow-hidden text-center text-white">
+            <i class="fas fa-shield-check text-7xl text-green-500 mb-8 z-10 animate-pulse relative"></i>
+            <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase italic tracking-tighter z-10 relative">100% Money Back Guarantee</h2>
+            <p class="text-xl text-green-100 mb-10 leading-relaxed font-medium italic z-10 max-w-2xl mx-auto relative">
+                "Kami sangat yakin dengan kualiti tutorial ini. Jika anda tonton, cuba, dan masih gagal bina landing page guna AI... kami pulangkan setiap sen duit anda tanpa banyak soal."
+            </p>
+            <div class="h-1 w-24 bg-green-500 mx-auto z-10 relative"></div>
+            <div class="absolute top-0 right-0 opacity-10 text-9xl transform translate-x-10 -translate-y-10 uppercase font-black italic text-green-700">PROTECTED</div>
+        </div>
     </section>
+
+    <footer id="order" class="py-24 px-6 text-center bg-black border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 text-9xl transform translate-x-10 -translate-y-10 uppercase font-black italic">SPEED</div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-7xl font-black mb-10 leading-tight uppercase tracking-tighter">Launch Cepat. <br><span class="gradient-text uppercase italic tracking-tighter">Control Sendiri.</span></h2>
+            <p class="text-xl text-gray-400 mb-12 italic leading-relaxed">
+                "Jangan biar idea anda basi hanya sebab masalah teknikal. Ambil alih kawalan bisnes anda hari ini juga."
+            </p>
+            <a href="https://learn.ksocialmarketing.com/" target="_blank" class="btn-pulse bg-yellow-400 text-black px-12 py-8 md:px-24 md:py-10 rounded-[30px] text-2xl md:text-5xl font-black hover:bg-white transition shadow-2xl inline-block w-full md:w-auto transform hover:scale-105 border-4 border-black/10 tracking-tighter">
+                DAPATKAN SEKARANG!
+            </a>
+            <div class="mt-12 space-y-2 text-white font-bold text-lg italic"><p>Tonton Sekarang. Terus Buat Sendiri.</p></div>
+            <div class="mt-24 text-center opacity-40 grayscale">
+                <img src="https://i.ibb.co/qL7kCDB7/Ksocial-Transparent-Logo.png" alt="Logo Footer" class="h-20 md:h-35 mx-auto mb-1 transition-transform group-hover:scale-105">
+                <p class="text-[15px] text-gray-700 uppercase tracking-[0.4em] font-bold">© 2026 KSOCIAL MARKETING • UNLOCKING POTENTIAL</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
