@@ -28,12 +28,12 @@
         #social-proof-popup {
             display: none;
             position: fixed;
-            top: 80px;      /* Jarak dari atas (di bawah Urgency Bar) */
-            right: 20px;    /* Jarak dari sebelah kanan skrin */
+            top: 20px;      /* Jarak dari atas (di bawah Urgency Bar) */
+            right: 10px;    /* Jarak dari sebelah kanan skrin */
             background: #1a1a2e;
             border-left: 4px solid #22c55e;
             border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
             width: 90%;
             max-width: 280px;
             z-index: 9999;  /* Memastikan ia sentiasa di atas elemen lain */
@@ -45,7 +45,7 @@
         @keyframes slideInRight {
             from { 
                 opacity: 0; 
-                transform: translateX(100%); 
+                transform: translateX(100px); 
             }
             to { 
                 opacity: 1; 
