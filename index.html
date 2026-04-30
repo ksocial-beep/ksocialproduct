@@ -282,48 +282,52 @@
         </div>
     </div>
 
-    <script>
-    const popup = document.getElementById('exit-popup');
-    let popupShown = false; // Memastikan pop-up hanya muncul sekali
+    <!-- SOCIAL PROOF POPUP ELEMENT -->
+<div id="social-proof-popup">
+    <div class="flex items-center gap-3">
+        <div class="flex-shrink-0 bg-green-500/20 p-2 rounded-full">
+            <i class="fas fa-shopping-cart text-green-500"></i>
+        </div>
+        <div>
+            <p class="text-xs text-white leading-tight">
+                <span id="buyer-name" class="font-bold text-green-400"></span> 
+                baru sahaja membeli tutorial ini!
+            </p>
+            <p class="text-[10px] text-gray-500 mt-0.5 tracking-tighter">Baru sahaja</p>
+        </div>
+    </div>
+</div>
 
-    // FUNGSI UNTUK PAPAR POP-UP
-    function showPopup() {
-        if (!popupShown) {
-            popup.style.display = 'flex';
-            popupShown = true; // Setkan kepada true supaya tidak muncul lagi
-            
-            // Simpan status dalam sessionStorage supaya jika mereka refresh, 
-            // pop-up tetap tidak muncul semula dalam sesi yang sama.
-            sessionStorage.setItem('ksocial_popup_shown', 'true');
-        }
+   <script>
+    // Senarai pembeli rawak
+    const buyers = [
+        "Ahmad dari Selangor", "Siti dari Johor Bahru", "Hafiz dari Penang", 
+        "Nurul dari Shah Alam", "Razif dari Kuala Lumpur", "Farah dari Melaka", 
+        "Azri dari Kedah", "Lina dari Negeri Sembilan"
+    ];
+    
+    const proofPopup = document.getElementById('social-proof-popup');
+    const nameDisplay = document.getElementById('buyer-name');
+
+    function showSocialProof() {
+        // Pilih nama secara rawak
+        const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+        nameDisplay.innerText = randomBuyer;
+        
+        // Tunjukkan popup
+        proofPopup.style.display = 'block';
+        
+        // Sembunyikan semula selepas 5 saat
+        setTimeout(() => {
+            proofPopup.style.display = 'none';
+        }, 5000);
     }
 
-    // SEMAK JIKA PERNAH DIPAPARKAN DALAM SESI INI
-    window.onload = function() {
-        if (sessionStorage.getItem('ksocial_popup_shown') === 'true') {
-            popupShown = true;
-        }
-    };
+    // Picu pertama: Muncul selepas 10 saat halaman dimuatkan
+    setTimeout(showSocialProof, 10000);
 
-    // PICU 1: NIAT KELUAR (Desktop - Mouse leave)
-    document.addEventListener('mouseleave', (e) => {
-        if (e.clientY < 0 && !popupShown) {
-            showPopup();
-        }
-    });
-
-    // PICU 2: MASA (Mobile & Desktop - Selepas 45 saat)
-    // Masa 45 saat dianggap "sweet spot" di mana pelawat sudah berminat tapi perlukan dorongan.
-    setTimeout(() => {
-        if (!popupShown) {
-            showPopup();
-        }
-    }, 45000); 
-
-    // FUNGSI TUTUP
-    function closePopup() {
-        popup.style.display = 'none';
-    }
+    // Picu seterusnya: Berulang setiap 50 saat
+    setInterval(showSocialProof, 50000);
 </script>
 </body>
 </html>
