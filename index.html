@@ -24,26 +24,34 @@
         #exit-popup { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
         .popup-content { background: #111; border: 2px solid #FBBF24; padding: 30px; border-radius: 20px; max-width: 500px; text-align: center; }
     
+       /* Cari bahagian ini di dalam tag <style> anda dan gantikan */
         #social-proof-popup {
-                display: none;
-                position: fixed;
-                top: 60px; /* Jarak dari atas supaya tidak bertindih dengan Sticky Bar */
-                right: 10%;
-                transform: translateX(-50%);
-                background: #1a1a2e;
-                border-left: 4px solid #22c55e;
-                border-radius: 10px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-                width: 90%;
-                max-width: 320px;
-                z-index: 1000;
-                padding: 12px;
-                animation: fadeInDown 0.5s ease-out;
+            display: none;
+            position: fixed;
+            top: 80px;      /* Jarak dari atas (di bawah Urgency Bar) */
+            right: 20px;    /* Jarak dari sebelah kanan skrin */
+            background: #1a1a2e;
+            border-left: 4px solid #22c55e;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 280px;
+            z-index: 9999;  /* Memastikan ia sentiasa di atas elemen lain */
+            padding: 12px;
+            animation: slideInRight 0.5s ease-out;
+        }
+    
+        /* Animasi masuk dari sebelah kanan */
+        @keyframes slideInRight {
+            from { 
+                opacity: 0; 
+                transform: translateX(100%); 
             }
-            @keyframes fadeInDown {
-                from { opacity: 0; transform: translate(-50%, -20px); }
-                to { opacity: 1; transform: translate(-50%, 0); }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
             }
+        }
     </style>
 </head>
 <body class="antialiased text-gray-200">
