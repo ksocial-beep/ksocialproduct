@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Landing Page AI 30 Minit | Ksocial Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        .gradient-text { background: linear-gradient(90deg, #8B5CF6, #FBBF24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Adaptive Typography for Header */
+        .hero-title { font-size: clamp(2.5rem, 10vw, 5.5rem); line-height: 1.1; }
+        .section-padding { padding-top: clamp(2.5rem, 8vh, 6rem); padding-bottom: clamp(2.5rem, 8vh, 6rem); }
+        
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(251, 191, 36, 0); } 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); } }
+        .btn-pulse { animation: pulse-gold 2s infinite; }
+        .benefit-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); transition: 0.3s ease; }
+        .benefit-card:hover { border-color: #FBBF24; transform: translateY(-5px); background: rgba(251, 191, 36, 0.02); }
+
+        #exit-popup { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+        .popup-content { background: #111; border: 2px solid #FBBF24; padding: 30px; border-radius: 20px; max-width: 500px; text-align: center; }
+    
+       /* Cari bahagian ini di dalam tag <style> anda dan gantikan */
+        #social-proof-popup {
+            display: none;
+            position: fixed;
+            top: 20px;      /* Jarak dari atas (di bawah Urgency Bar) */
+            right: 12px;    /* Jarak dari sebelah kanan skrin */
+            background: #1a1a2e;
+            border-left: 4px solid #22c55e;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            width: 90%;
+            max-width: 280px;
+            z-index: 9999;  /* Memastikan ia sentiasa di atas elemen lain */
+            padding: 12px;
+            animation: slideInRight 0.5s ease-out;
+        }
+    
+        /* Animasi masuk dari sebelah kanan */
+        @keyframes slideInRight {
+            from { 
+                opacity: 0; 
+                transform: translateX(100px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-200">
+
+    <section class="min-h-screen flex flex-col justify-start py-10 px-6">
+        <nav class="text-center mb-12">
+            <img src="https://i.ibb.co/qL7kCDB7/Ksocial-Transparent-Logo.png" alt="Logo" class="h-16 md:h-24 mx-auto mb-2">
+            <p class="text-[8px] md:text-[10px] tracking-[0.4em] text-gray-500 uppercase font-bold">Unlocking Potential • Driving Growth</p>
+        </nav>
+
+        <header class="max-w-6xl mx-auto text-center mb-12">
+            <h1 class="hero-title font-black tracking-tighter">
+                Bayangkan boleh launch <br>
+                <span class="text-yellow-400">landing page dalam 30 minit…</span><br>
+                <span class="text-white/30 font-light">tanpa tunggu sesiapa.</span>
+            </h1>
+        </header>
+
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-6 text-left border-y border-white/10 py-8 my-6">
+            <div class="px-4"><span class="text-yellow-500 font-black text-xs uppercase">01. STATUS</span><p class="text-gray-300 text-lg md:text-xl serif-italic italic">"Idea dah ada. Offer dah ready."</p></div>
+            <div class="md:border-l border-white/10 px-4"><span class="text-red-500 font-black text-xs uppercase">02. MASALAH</span><p class="text-gray-400 text-lg md:text-xl italic">"Sangkut dekat landing page. Tunggu designer. Revise. Tunggu lagi."</p></div>
+            <div class="md:border-l border-white/10 px-4"><span class="text-blue-500 font-black text-xs uppercase">03. KESAN</span><p class="text-white text-xl md:text-2xl font-bold uppercase tracking-tighter">"Launch delay. Momentum hilang."</p></div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="#order" class="btn-pulse inline-block w-full md:w-auto bg-yellow-500 text-black font-black py-6 px-12 rounded-full text-2xl uppercase tracking-tighter hover:bg-white transition-all">
+                Dapatkan Tutorial Sekarang
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-zinc-950 section-padding px-6 border-y border-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="bg-red-500/10 text-red-500 py-1 px-4 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block border border-red-500/20">Kenyataan Pahit Usahawan</span>
+                <h2 class="serif-italic text-4xl md:text-6xl text-white leading-tight">"Setiap hari anda tangguh: Lead tak masuk, Sales tak jadi, Momentum hilang."</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800"><i class="fas fa-users text-2xl text-red-500/50 mb-3"></i><p class="text-sm">Ramai usahawan stuck benda yang sama.</p></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800"><i class="fas fa-hourglass-half text-2xl text-red-500/50 mb-3"></i><p class="text-sm">LP tak siap-siap. Tunggu 2–5 hari.</p></div>
+                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800"><i class="fas fa-sync-alt text-2xl text-yellow-500/50 mb-3"></i><p class="text-sm">Kena revise. Tak tahu coding. Stuck.</p></div>
+                <div class="bg-red-950/20 p-6 rounded-2xl border border-red-900"><i class="fas fa-times-circle text-2xl text-red-500 mb-3"></i><p class="text-red-500 font-black uppercase text-xs">Launch Delay. Campaign Gagal.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Bagaimana Tutorial Ini <br><span class="text-yellow-400">Membantu Anda Sebagai Usahawan</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left">
+                    <div class="w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-bolt text-3xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Pantas & Segera</h3>
+                    <p class="text-gray-400 leading-relaxed">Jimat masa gila-gila. Ada produk atau idea baru? Boleh terus launch hari ini juga tanpa tunggu berminggu-minggu.</p>
+                </div>
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-money-bill-wave text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Sales Lebih Awal</h3>
+                    <p class="text-gray-400 leading-relaxed">Mula jana sales lebih cepat. Makin cepat anda launch, makin cepat anda test pasaran dan dapatkan ROI.</p>
+                </div>
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-piggy-bank text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Jimat Kos Gila-Gila</h3>
+                    <p class="text-gray-400 leading-relaxed">Tak perlu upah designer mahal untuk satu LP. Buat sendiri guna AI dengan kos yang sangat minimal.</p>
+                </div>
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left">
+                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-trophy text-3xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Dominasi Pesaing</h3>
+                    <p class="text-gray-400 leading-relaxed">Bertindak lebih pantas daripada pesaing anda yang masih tercari-cari cara nak bina website.</p>
+                </div>
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-bullseye text-3xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Tumpu Fokus Utama</h3>
+                    <p class="text-gray-400 leading-relaxed">Bila teknikal dah settle cepat, anda boleh fokus pada strategi marketing, closing, dan grow bisnes anda.</p>
+                </div>
+                <div class="benefit-card p-8 rounded-3xl text-center md:text-left border-yellow-500/20 bg-yellow-500/5">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fas fa-magic text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 uppercase">Skill Masa Depan</h3>
+                    <p class="text-gray-400 leading-relaxed">Kuasai teknologi AI yang akan menjimatkan ribuan ringgit dan beratus jam kerja anda di masa depan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <i class="fas fa-brain text-5xl text-blue-500 mb-6"></i>
+            <h2 class="text-3xl md:text-5xl font-black mb-4">Ini <span class="text-blue-400">Penyelesaian</span> Anda</h2>
+            <p class="text-xl md:text-2xl font-bold uppercase gradient-text">“Bina Landing Page guna AI — 30 Minit Siap”</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+                <h3 class="text-xl font-bold mb-6 text-yellow-400 uppercase italic">Apa Anda Dapat</h3>
+                <ul class="space-y-4 text-sm md:text-base">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Generate structure sepantas kilat.</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Headline 'pukau' guna AI.</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Level antarabangsa tanpa coding.</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Automasi collect leads.</li>
+                </ul>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+                <h3 class="text-xl font-bold mb-6 text-purple-400 uppercase italic">Bonus Learning</h3>
+                <ul class="space-y-4 text-sm md:text-base text-gray-300">
+                    <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> Pilih tools tepat & jimat kos.</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> Review Landing Page Bisnes sebenar.</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> Strategi Flow yang Convert.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding px-6 bg-zinc-950 border-y border-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 text-center uppercase">Hasil Kerja Student Kami</h2>
+            <div class="space-y-12">
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/10">
+                    <div class="p-3 bg-zinc-800 text-yellow-400 text-xs text-center font-black uppercase">Digital Course Style</div>
+                    <img src="https://i.ibb.co/JwCC3GkH/sample-utmhacademy.png" alt="Sample 1" class="w-full">
+                </div>
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-white/10">
+                    <div class="p-3 bg-zinc-800 text-blue-400 text-xs text-center font-black uppercase">Professional Service Style</div>
+                    <img src="https://i.ibb.co/Nd3LfLcb/sample-ppu.png" alt="Sample 2" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding px-6 max-w-6xl mx-auto text-center">
+        <div class="bg-green-950/20 p-8 md:p-16 rounded-[40px] border border-green-900/50">
+            <i class="fas fa-shield-check text-6xl text-green-500 mb-6"></i>
+            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase italic">100% Money Back Guarantee</h2>
+            <p class="text-lg text-green-100 max-w-2xl mx-auto italic">Tonton, cuba, dan jika masih gagal bina landing page — kami pulangkan duit anda tanpa banyak soal.</p>
+        </div>
+    </section>
+
+<section class="section-padding px-6">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-yellow-950/40 to-orange-950/40 border border-yellow-500/30 rounded-3xl p-8 md:p-16 text-center shadow-2xl">
+            <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">PILIH PAKEJ PELANCARAN ANDA</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 hover:border-yellow-500/50 transition duration-300">
+                    <p class="text-sm font-bold text-yellow-500 uppercase mb-4 tracking-tighter italic">📹 Video Tutorial Sahaja</p>
+                    <p class="text-xl text-gray-500 line-through mb-1 uppercase">RM97</p>
+                    <p class="text-5xl md:text-6xl font-black text-white mb-6 tracking-tighter">RM49</p>
+                    <ul class="text-gray-400 text-sm space-y-2 mb-2 italic">
+                        <li>✓ Tutorial Penuh 3 Jam</li>
+                        <li>✓ Akses Selamanya</li>
+                    </ul>
+                </div>
+
+                <div class="bg-zinc-900/80 p-8 rounded-2xl border-2 border-yellow-500/50 relative transform md:scale-105 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-[10px] font-black px-4 py-1 rounded-full uppercase">Paling Berbaloi</div>
+                    <p class="text-sm font-bold text-yellow-500 uppercase mb-4 tracking-tighter italic">🎁 Video Tutorial + Prompt Pack</p>
+                    <p class="text-xl text-gray-500 line-through mb-1 uppercase">RM137</p>
+                    <p class="text-5xl md:text-6xl font-black text-yellow-400 mb-6 tracking-tighter">RM59</p>
+                    <ul class="text-gray-200 text-sm space-y-2 mb-2 font-bold italic">
+                        <li>✓ Tutorial Penuh 3 Jam</li>
+                        <li>✓ Premium AI Prompt Pack</li>
+                        <li>✓ Akses Selamanya</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-sm md:text-lg text-red-400 font-bold mb-10 italic underline decoration-double">
+                ⚠️ Harga ini akan naik bila-bila masa. Jangan tangguh!
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12 border-t border-white/10 pt-8 text-white">
+                <div class="flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-wide">
+                    <i class="fas fa-infinity text-yellow-500"></i> Akses Selamanya
+                </div>
+                <div class="flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-wide">
+                    <i class="fas fa-lock text-yellow-500"></i> Bayaran Selamat
+                </div>
+                <div class="flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-wide text-green-400">
+                    <i class="fas fa-history text-yellow-500"></i> Money Back Guarantee
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / ORDER SECTION -->
+    <footer id="order" class="py-24 px-6 text-center bg-black border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 text-9xl transform translate-x-10 -translate-y-10 uppercase font-black italic text-white">SPEED</div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-7xl font-black mb-10 leading-tight uppercase tracking-tighter text-white">Launch Cepat. <br><span class="gradient-text uppercase italic tracking-tighter">Control Sendiri.</span></h2>
+            <p class="text-xl text-gray-400 mb-12 italic leading-relaxed text-gray-400">
+                "Jangan biar idea anda basi hanya sebab masalah teknikal. Ambil alih kawalan bisnes anda hari ini juga."
+            </p>
+            
+            <!-- FIXED EMBEDDED CHECKOUT -->
+            <div id="bcl-payment-form" data-url="https://ksocialmarketing.bcl.my/embed/form/digital-product"></div>
+            <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
+
+            <div class="mt-12 space-y-2 text-white font-bold text-lg italic text-white">
+                <p>Tonton Sekarang. Terus Buat Sendiri.</p>
+            </div>
+
+            <div class="mt-24 text-center opacity-40 grayscale">
+                <img src="https://i.ibb.co/qL7kCDB7/Ksocial-Transparent-Logo.png" alt="Logo Footer" class="h-20 md:h-35 mx-auto mb-1 transition-transform group-hover:scale-105">
+                <p class="text-[15px] text-gray-700 uppercase tracking-[0.4em] font-bold">© 2026 KSOCIAL MARKETING • UNLOCKING POTENTIAL</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="exit-popup">
+        <div class="popup-content">
+            <h3 class="text-3xl font-black text-yellow-400 mb-4 uppercase">Tunggu Kejap!</h3>
+            <p class="text-lg text-white mb-8">Sanggup lepaskan peluang launch bisnes <span class="text-red-500 font-bold">lebih laju</span> daripada drive dari Bangi ke KL? 🚗💨</p>
+            <button onclick="closePopup()" class="w-full bg-yellow-500 text-black font-black py-4 rounded-xl uppercase">Saya Nak Launch Laju!</button>
+        </div>
+    </div>
+
+    <!-- SOCIAL PROOF POPUP ELEMENT -->
+<div id="social-proof-popup">
+    <div class="flex items-center gap-3">
+        <div class="flex-shrink-0 bg-green-500/20 p-2 rounded-full">
+            <i class="fas fa-shopping-cart text-green-500"></i>
+        </div>
+        <div>
+            <p class="text-xs text-white leading-tight">
+                <span id="buyer-name" class="font-bold text-green-400"></span> 
+                baru sahaja membeli tutorial ini!
+            </p>
+            <p class="text-[10px] text-gray-500 mt-0.5 tracking-tighter">Baru sahaja</p>
+        </div>
+    </div>
+</div>
+
+   <script>
+    // Senarai pembeli rawak
+    const buyers = [
+        "Ahmad dari Selangor", "Siti dari Johor Bahru", "Hafiz dari Penang", 
+        "Nurul dari Shah Alam", "Razif dari Kuala Lumpur", "Farah dari Melaka", 
+        "Azri dari Kedah", "Lina dari Negeri Sembilan"
+    ];
+    
+    const proofPopup = document.getElementById('social-proof-popup');
+    const nameDisplay = document.getElementById('buyer-name');
+
+    function showSocialProof() {
+        // Pilih nama secara rawak
+        const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+        nameDisplay.innerText = randomBuyer;
+        
+        // Tunjukkan popup
+        proofPopup.style.display = 'block';
+        
+        // Sembunyikan semula selepas 5 saat
+        setTimeout(() => {
+            proofPopup.style.display = 'none';
+        }, 5000);
+    }
+
+    // Picu pertama: Muncul selepas 5 saat halaman dimuatkan
+    setTimeout(showSocialProof, 5000);
+
+    // Picu seterusnya: Berulang setiap 15 saat
+    setInterval(showSocialProof, 15000);
+</script>
+</body>
+</html>
